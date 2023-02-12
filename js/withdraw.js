@@ -1,7 +1,7 @@
 document.getElementById("btn-withdraw").addEventListener("click", function () {
   // input deposit
   const withdrawField = document.getElementById("withdraw-amount");
-  const newWithdrawAmount = withdrawField.value;
+  const newWithdrawAmount = parseFloat(withdrawField.value);
 
   //   deposit total
   const withdrawTotal = document.getElementById("withdraw-total");
@@ -11,11 +11,15 @@ document.getElementById("btn-withdraw").addEventListener("click", function () {
   const balanceTotalAmount = document.getElementById("balance-total");
   const previousBalanceTotal = parseFloat(balanceTotalAmount.innerText);
 
-  if (newWithdrawAmount === "") {
-    alert("Please enter withdraw amount");
+  if (isNaN(newWithdrawAmount)) {
+    alert("Please enter withdraw amount of number");
   } else if (parseFloat(newWithdrawAmount) > previousBalanceTotal) {
     alert("Your Balance is Low!!!");
-  } else {
+  }
+  // else if (typeof newWithdrawNumber === "string") {
+  //   alert("Please enter number of amount");
+  // }
+  else {
     withdrawTotal.innerText =
       parseFloat(previousWithdrawTotalAmount) + parseFloat(newWithdrawAmount);
 
