@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Bank</title>
+    <!-- TAILWIND CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- CUSTOM TAILWIND CSS -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- HEADER SECTION -->
+    <header>
+      <h1 class="text-5xl text-center mt-8">
+        Let's get some
+        <span class="font-semibold text-fuchsia-600">Moooney</span>!!!
+      </h1>
+    </header>
+    <!-- MAIN SECTION -->
+    <main>
+      <!-- CARD SECTION -->
+      <section class="w-9/12 mx-auto mt-12 text-white">
+        <div class="grid grid-cols-3 gap-4">
+          <div class="bg-emerald-300 p-8 rounded-lg">
+            <h4 class="text-2xl">Deposit</h4>
+            <h2 class="text-5xl">$00</h2>
+          </div>
+          <div class="bg-cyan-300 p-8 rounded-lg">
+            <h4 class="text-2xl">Withdraw</h4>
+            <h2 class="text-5xl">$00</h2>
+          </div>
+          <div class="bg-indigo-400 p-8 rounded-lg">
+            <h4 class="text-2xl">Balance</h4>
+            <h2 class="text-5xl">$1240</h2>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
